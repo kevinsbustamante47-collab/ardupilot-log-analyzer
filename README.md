@@ -2,7 +2,7 @@
 
 ## Qué es esto
 
-Dos archivos que reemplazan lo que yo (Claude) he estado haciendo manualmente:
+Dos archivos que reemplazan el análisis manualmente:
 
 1. **`extract_facts.py`** — Script Python. Lee un `.BIN` y calcula TODOS los
    números relevantes (GPS, vibración, actitud, energía, errores, etc.) usando
@@ -16,9 +16,7 @@ Dos archivos que reemplazan lo que yo (Claude) he estado haciendo manualmente:
 
 ## Por qué esta separación es importante
 
-El problema original con Antigravity era que el agente calculaba Y redactaba
-al mismo tiempo, lo que le permitía "rellenar" con suposiciones cuando algo
-no tenía sentido. Aquí separamos las dos cosas:
+ Aquí separamos las dos cosas:
 
 ```
   .BIN  →  [extract_facts.py]  →  .facts.json  →  [GPT/Gemini + prompt]  →  Informe.md
